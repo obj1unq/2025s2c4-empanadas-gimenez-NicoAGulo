@@ -2,15 +2,15 @@ import empleados.*
 
 test "punto1: Planteo inicial" {
 
-  baigorria.vender(500)
-  galvan.sueldo(20000)
-  baigorria.vender(300)
-  assert.equals(12000, baigorria.sueldo())
-  assert.equals(20000, galvan.sueldo())
+  empleado2.venderEmpanadas(300)
+  empleado2.venderEmpanadas(500)
+  dueño.nuevoSueldoDeGalvan(20000)
+  assert.equals(12000, dueño.sueldoDeGalvan())
+  assert.equals(20000, dueño.sueldoDeGalvan())
   
-  gimenez.pagarSueldo(baigorria)
-  gimenez.pagarSueldo(galvan)
-  assert.equals(268000, gimenez.fondo())
+  dueño.pagarComisionesBaigorria()
+  dueño.pagarSueldoAGalvan()
+  assert.equals(268000, dueño.fondos())
   
 }
 
