@@ -1,5 +1,23 @@
 import empleados.*
 
+describe "galvan"{
+  test "sueldo de galvan en 12000 o 15000"{
+    galvan.sueldo(12000)
+    assert.equals(12000, galvan.sueldo())
+    galvan.sueldo(galvan.sueldo()+3000)
+    assert.equals(15000, galvan.sueldo())
+  }
+}
+
+describe "baigorria"{
+  test "sueldo de baigorria en base a la venta de 500 empanadas"{
+
+
+
+    assert.equals(7500, baigorria.sueldo())
+  }
+}
+
 test "punto1: Planteo inicial" {
 
   empleado2.venderEmpanadas(300)
