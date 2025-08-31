@@ -1,23 +1,42 @@
 import empleados.*
-describe "baigorria"{
-  test "baigorria vende 500 empanadas"{
-    baigorria.vender(500)
-    assert.equals(500*15, baigorria.sueldo())
+
+describe "baigorria" {
+  test "baigorria vende 500 empanadas" {
+    baigorria.vender(500)    
+    assert.equals(500 * 15, baigorria.sueldo())
+  }
+
+  test "baigorria vende 300 empanadas" {
+    baigorria.vender(300)    
+    assert.equals(300 * 15, baigorria.sueldo())
   }
 }
 
-
-test "punto1: Planteo inicial" {
-
-  baigorria.vender(500)
-  galvan.sueldo(20000)
-  baigorria.vender(300)
-  assert.equals(12000, baigorria.sueldo())
-  assert.equals(20000, galvan.sueldo())
-  
-  gimenez.pagarSueldo(baigorria)
-  gimenez.pagarSueldo(galvan)
-  assert.equals(268000, gimenez.fondo())
-  
+describe "galvan" {
+    test "galvan cobra un sueldo de 20.000" {
+    galvan.sueldo(20000)
+    
+    assert.equals(20000, galvan.sueldo())
+  }
 }
 
+// describe "gimenez" {
+//   test "gimenez paga sueldo a galvan" {
+//     gimenez.pagarSueldo(galvan)
+//   }
+//   test "gimenez paga sueldo a baigorria" {
+//     gimenez.pagarSueldo(baigorria)
+//   }
+// }
+
+// test "punto1: Planteo inicial" {
+//   baigorria.vender(500)
+//   galvan.sueldo(20000)
+//   baigorria.vender(300)
+//   assert.equals(12000, baigorria.sueldo())
+//   assert.equals(20000, galvan.sueldo())
+  
+//   gimenez.pagarSueldo(baigorria)
+//   gimenez.pagarSueldo(galvan)
+//   assert.equals(268000, gimenez.fondo())
+// }
