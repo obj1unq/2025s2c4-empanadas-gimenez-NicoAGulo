@@ -29,28 +29,28 @@ describe "galvan" {
   }
 }
 
-// describe "gimenez" {
-//   test "gimenez paga sueldo a galvan" {
-//     gimenez.pagarSueldo(galvan)
+describe "gimenez" {
+  test "gimenez paga sueldo a galvan" {
+    gimenez.pagarSueldo(galvan)
 
-//     assert.equals(300000-15000, gimenez.fondo())
-//     assert.equals(15000, galvan.sueldo())
-//   }
+    assert.equals(300000-15000, gimenez.fondo())
+    assert.equals(15000, galvan.sueldo())
+  }
 
-//   test "gimenez paga sueldo a baigorria" {
-//     baigorria.empanadasVendidas(300)
+  test "gimenez paga sueldo a baigorria" {
+    baigorria.empanadasVendidas(300)
 
-//     assert.equals(4500, baigorria.sueldoACobrar())
+    assert.equals(4500, baigorria.sueldoACobrar())
 
-//     // gimenez.pagarSueldo(baigorria)
+    gimenez.pagarSueldo(baigorria)
 
-//     // assert.equals(300000 - 4500, gimenez.fondo())
-//     // assert.equals(0, baigorria.empanadasVendidas())
-//     // assert.equals(4500, baigorria.sueldo())
-//   }
+    assert.equals(300000 - 4500, gimenez.fondo())
+    assert.equals(0, baigorria.empanadasVendidas())
+    assert.equals(4500, baigorria.sueldo())
+  }
 
 
-// }
+}
 
 // test "punto1: Planteo inicial" {
 //   baigorria.vender(500)
