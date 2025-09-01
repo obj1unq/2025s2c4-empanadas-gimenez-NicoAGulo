@@ -1,12 +1,23 @@
 //Escribir aqui los objetos
 
 object baigorria{
-  var comisionEmpanada=15
-  var property sueldo = 0 
+  var property comisionEmpanada=15
+  var property sueldo = 0
+  var property empanadasVendidas=0
 
   method vender(cantidad){
     sueldo+= cantidad*comisionEmpanada
   }
+
+  method cobrarSueldo(){
+    sueldo+=self.sueldoACobrar()
+    self.empanadasVendidas(0)
+  }
+
+  method sueldoACobrar(){
+    return empanadasVendidas*comisionEmpanada
+  }
+
 }
 
 object galvan {
@@ -19,11 +30,12 @@ object galvan {
   }
 }
 
-// object gimenez{
-//   var property fondo = 300000 
+object gimenez{
+  var property fondo = 300000 
 
-//   method pagarSueldo(empleado) {
-//     fondo-= empleado.sueldoACobrar()
-//     empleado.cobrarSueldo()
-//   }
-// }
+  method pagarSueldo(empleado) {
+    fondo-= empleado.sueldoACobrar()
+    empleado.cobrarSueldo()
+  }
+}
+
